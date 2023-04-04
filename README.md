@@ -30,7 +30,7 @@ For sending real-time tracks to endpoint, please refer to sample.npy for an exam
       "frame_idx": 48, # 出现帧ID
       "start_time": "2023-03-21 23:33:42", # 出现时间
       "end_time": "2023-03-21 23:33:57", # 结束时间
-      "camera_id": 'camera_a', # camera id
+      "camera_id": "camera_a", # camera id
       "trajectory": [
          [
             559.5,
