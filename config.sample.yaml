@@ -1,0 +1,24 @@
+service:
+  host: '0.0.0.0'
+  port: 8080
+  debug_mode: False
+  use_mock_data: True
+  mock_sample_path: './samples/mock_stream/sample.npy'
+streaming_api:
+  enabled: true
+reid:
+  resnet50_model_dir: 'weights/'
+  resnet50_model_file_name: 'resnet50_ibn_a-d9d0bb7b.pth'
+#  reid_model_path: 'utils/modified_lightreid/model_data/resnet50_ibn_a-d9d0bb7b.pth'
+  model_path: 'weights/multiple_datasets_trained_model.pth'
+  config_path: 'utils/modified_lightreid/configs/base_config_multidataset_ibn50.yaml'
+  similarity_threshold: 0.3
+matching_interval: 5 # seconds between feature extraction (frequency)
+image_queue_limit: 1000 # max number of image in queue for feature extraction
+duration_thresh: 1 # filter out those tracker that durates < Ns
+# matching_queue_limit: 5 # number of images in queue to track
+clearing_interval: 30 # seconds between clearing scheduling
+clearing_threshold: 50 # seconds before the clearing of track last showed up
+max_time_delta_seconds: 3600
+max_num_images_to_compare: 50 # Max number of images in a cluster to be selected for calculating the image-cluster similarity
+clustering_queue_limit: 1000
