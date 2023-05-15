@@ -3,7 +3,8 @@ service:
   port: 8080
   debug_mode: False
   use_mock_data: True
-  mock_sample_path: './samples/mock_stream/sample.npy'
+  # mock_sample_path: './samples/mock_stream/sample.npy'
+  mock_sample_path: '/Users/wangzt/multitracker-sagemaker/local_task.npy'
 streaming_api:
   enabled: true
 reid:
@@ -15,7 +16,8 @@ reid:
   similarity_threshold: 0.3
 matching_interval: 5 # seconds between feature extraction (frequency)
 image_queue_limit: 1000 # max number of image in queue for feature extraction
-duration_thresh: 1 # filter out those tracker that durates < Ns
+duration_thresh: 2 # filter out those tracker that durates < Ns
+size_thresh: 30000 # filter out those tracker that size (height * width) < N pixels
 # matching_queue_limit: 5 # number of images in queue to track
 clearing_interval: 30 # seconds between clearing scheduling
 clearing_threshold: 50 # seconds before the clearing of track last showed up

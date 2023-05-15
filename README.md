@@ -1,6 +1,9 @@
+## Brief Introduction
+The repo is 
+
 ## Deployment
 
-Copy `multiple_datasets_trained_model.pth` and `resnet50_ibn_a-d9d0bb7b.pth` to `utils/modified_lightreid/model_data/`
+Copy `multiple_datasets_trained_model.pth` and `resnet50_ibn_a-d9d0bb7b.pth` to `./weights/` folder. Please ask author for weight files.
 
 Copy `config.sample.yaml` to `config.yaml` and check parameters.
 
